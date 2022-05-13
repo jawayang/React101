@@ -16,3 +16,5 @@ const Home = () => {
 };
 
 export default Home;
+
+// video --> https://www.youtube.com/watch?v=zqV7NIFGDrQ&t=2475s
