@@ -1,11 +1,9 @@
 import Item from './Item'
 
-const arr = [1,2,3]
-
-const List = ()=>{
+const List = ({listData})=>{
   return <div className="list">
     {
-      arr.map((item) => <Item />)
+      listData.map(item => <Item key={item} />)
     }
   </div>  
 }

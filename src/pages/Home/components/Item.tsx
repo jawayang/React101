@@ -1,6 +1,6 @@
 const Item = ()=>{
   return  <div className="item">
-    123
+    我是 item 
     <button className="remove">刪除</button>  
   </div>
 }
