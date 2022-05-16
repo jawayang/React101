@@ -5,7 +5,7 @@ const arr = [1,2,3]
 const List = ()=>{
   return <div className="list">
     {
-      arr.map((item) => <div>{item}</div>)
+      arr.map((item) => <Item />)
     }
   </div>  
 }
