@@ -1,4 +1,8 @@
+import Item from './Item'
+
 const List = ()=>{
-  return <div>List</div>
+  return <div className="list">
+    <Item/>  
+  </div>  
 }
 export default List

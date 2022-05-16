@@ -2,13 +2,9 @@ import Edit from "./components/Edit";
 import List from "./components/List";
 import "./index.css";
 
-const app = {
- color:'red'
-}
-
 const Home = () => {
   return (
-    <div style={app}>
+    <div>
       <Edit/>
       <List/>
     </div>
