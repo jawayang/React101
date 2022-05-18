@@ -4,6 +4,7 @@ interface List {
   note: string;
   date: string;
   time: string;
+  id: number;
 }
 
 const List = ({
@@ -11,14 +12,20 @@ const List = ({
   deleteData,
 }: {
   listData: List[];
-  deleteData: List[];
+  deleteData: Function;
 }) => {
   return (
     <div className="list">
       {listData.map((item) => {
-        const { note, date, time } = item;
+        const { id, note, date, time } = item;
         return (
-          <Item note={note} date={date} time={time} deleteData={deleteData} />
+          <Item
+            id={id}
+            note={note}
+            date={date}
+            time={time}
+            deleteData={deleteData}
+          />
         );
       })}
     </div>
