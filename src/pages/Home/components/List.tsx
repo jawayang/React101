@@ -1,4 +1,4 @@
-import Item from './Item'
+import Item from "./Item";
 
 interface List {
   note: string;
@@ -6,17 +6,23 @@ interface List {
   time: string;
 }
 
-const List = ({listData}: {listData: List[]}) => {
+const List = ({
+  listData,
+  deleteData,
+}: {
+  listData: List[];
+  deleteData: List[];
+}) => {
   return (
     <div className="list">
-    {
-      listData.map(item => {
-        const {note,date,time} = item
-        return <Item note={note} date={date} time={time} />
-      })
-    }
-  </div>
-  )
-}
+      {listData.map((item) => {
+        const { note, date, time } = item;
+        return (
+          <Item note={note} date={date} time={time} deleteData={deleteData} />
+        );
+      })}
+    </div>
+  );
+};
 
-export default List
+export default List;
