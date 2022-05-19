@@ -2,13 +2,18 @@ import { useState, useEffect } from "react";
 import Edit from "./components/Edit";
 import List from "./components/List";
 import "./index.css";
-
+import {API_GET_DATA} from '../../global/constants'
 
 const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(()=>{
-
+    console.log('test',API_GET_DATA)
+     fetch(API_GET_DATA)
+       .then(res=>res.json())
+       .then(data=>{
+         console.log(data)
+        })
   },[])
   
   return (
