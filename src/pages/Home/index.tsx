@@ -7,13 +7,14 @@ import {API_GET_DATA} from '../../global/constants'
 const Home = () => {
   const [data, setData] = useState([]);
 
+  const fetchData = async ()=>{
+    const res = await fetch(API_GET_DATA)
+    const data = await res.json()
+    console.log(data)
+  }
+  
   useEffect(()=>{
-    console.log('test',API_GET_DATA)
-     fetch(API_GET_DATA)
-       .then(res=>res.json())
-       .then(data=>{
-         console.log(data)
-        })
+    fetchData()
   },[])
   
   return (
